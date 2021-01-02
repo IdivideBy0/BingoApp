@@ -14,5 +14,7 @@ namespace BingoApp.Helpers
         public List<int> Orow { get; set; }
 
         public int totalBalls { get; set; }
+
+        public KeyValuePair<int, char> lastCalledBall { get; set; }
     }
 }
