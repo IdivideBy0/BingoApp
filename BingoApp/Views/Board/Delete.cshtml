@@ -1,0 +1,106 @@
+﻿@model BingoApp.Helpers.BdHelper
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Draw Ball", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>B</td>
+            @foreach (var item in Model.Brow)
+            {
+                <td>
+
+                    @{
+                        string tmp = item.ToString();
+
+                    }@tmp
+
+                </td>
+            }
+        </tr>
+
+        <tr>
+            <td>I</td>
+            @foreach (var item in Model.Irow)
+            {
+                <td>
+
+                    @{
+                        string tmp = item.ToString();
+
+                    }@tmp
+
+                </td>
+            }
+        </tr>
+
+        <tr>
+            <td>N</td>
+            @foreach (var item in Model.Nrow)
+            {
+                <td>
+
+                    @{
+                        string tmp = item.ToString();
+
+                    }@tmp
+
+                </td>
+            }
+        </tr>
+
+        <tr>
+            <td>G</td>
+            @foreach (var item in Model.Grow)
+            {
+                <td>
+
+                    @{
+                        string tmp = item.ToString();
+
+                    }@tmp
+
+                </td>
+            }
+        </tr>
+
+        <tr>
+            <td>O</td>
+            @foreach (var item in Model.Orow)
+            {
+                <td>
+
+                    @{
+                        string tmp = item.ToString();
+
+                    }@tmp
+
+                </td>
+            }
+        </tr>
+
+    </table>
+    <p>Balls remaining -> @Model.totalBalls</p>
+    <div>
+        @Html.ActionLink("New Board", "Delete")
+    </div>
+</body>
+</html>
