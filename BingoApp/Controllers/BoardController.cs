@@ -46,7 +46,7 @@ namespace BingoApp.Controllers
                 {
                     Board.Brow.RemoveAt(pos);
                     Board.Brow.Add(Ball.number);
-                    //Board.Brow.OrderBy(x => x).ToArray();
+                    
                 }
                 else
                 {
@@ -61,7 +61,7 @@ namespace BingoApp.Controllers
                 {
                     Board.Irow.RemoveAt(pos);
                     Board.Irow.Add(Ball.number);
-                    //Board.Irow.OrderBy(x => x).ToArray();
+                    
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace BingoApp.Controllers
                 {
                     Board.Nrow.RemoveAt(pos);
                     Board.Nrow.Add(Ball.number);
-                    //Board.Nrow.OrderBy(x => x).ToArray();
+                    
                 }
                 else
                 {
@@ -91,7 +91,7 @@ namespace BingoApp.Controllers
                 {
                     Board.Grow.RemoveAt(pos);
                     Board.Grow.Add(Ball.number);
-                    //Board.Grow.OrderBy(x => x).ToArray();
+                    
                 }
                 else
                 {
@@ -106,7 +106,7 @@ namespace BingoApp.Controllers
                 {
                     Board.Orow.RemoveAt(pos);
                     Board.Orow.Add(Ball.number);
-                    //Board.Orow.OrderBy(x => x).ToArray();
+                    
                 }
                 else
                 {
