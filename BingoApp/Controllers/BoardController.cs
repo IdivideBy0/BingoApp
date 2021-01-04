@@ -15,7 +15,7 @@ namespace BingoApp.Controllers
         {
             //Board board = new Board();
 
-            Board.InitBoard();
+            //Board.InitBoard();
 
             BdHelper helper = new BdHelper { Brow = Board.Brow, Irow = Board.Irow, Nrow = Board.Nrow, Grow = Board.Grow, Orow = Board.Orow };
             helper.totalBalls = Ball.totalBalls;

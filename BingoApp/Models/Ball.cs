@@ -23,7 +23,7 @@ namespace BingoApp.Models
         public static int number { get; set; }
 
         public static void InitBalls() // reset ball generator to original values
-            {
+        {
             bBalls = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
             iBalls = new List<int> { 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 };
             nBalls = new List<int> { 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 };
@@ -34,10 +34,10 @@ namespace BingoApp.Models
 
             totalBalls = 75;
         }
-        
+
         public static KeyValuePair<int, char> CreateBall()
         {
-            
+
 
             if (totalBalls > 0)
             {

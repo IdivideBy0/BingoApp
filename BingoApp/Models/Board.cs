@@ -9,11 +9,11 @@ namespace BingoApp.Models
     public static class Board
     {
         
-        public static List<int> Brow { get; set; }
-        public static List<int> Irow { get; set; }
-        public static List<int> Nrow { get; set; }
-        public static List<int> Grow { get; set; }
-        public static List<int> Orow { get; set; }
+        public static List<int> Brow = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public static List<int> Irow = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public static List<int> Nrow = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public static List<int> Grow = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public static List<int> Orow = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         public static void InitBoard()
         {
