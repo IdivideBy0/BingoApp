@@ -22,12 +22,19 @@ namespace BingoApp.Models
 
         public static void GenerateCard()
         {
+            // clear previous values
+            rowB.Clear();
+            rowI.Clear();
+            rowN.Clear();
+            rowG.Clear();
+            rowO.Clear();
 
-            //while (amt > 0)
-            {
-                //Console.WriteLine("Generating Card...");
+            
 
-                Random rnd = new Random(Guid.NewGuid().GetHashCode());
+
+            //Console.WriteLine("Generating Card...");
+
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
 
                 for (int i = 0; i < 5; i++)
                 {
@@ -122,6 +129,6 @@ namespace BingoApp.Models
                 intRowG = rowG.ToArray();
                 intRowO = rowO.ToArray();
             }
-        }
+        
     }
 }

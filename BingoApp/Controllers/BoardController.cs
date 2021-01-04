@@ -178,9 +178,7 @@ namespace BingoApp.Controllers
         // GET: Board/Delete/5
         public ActionResult Delete()
         {
-            //Ball ball = new Ball();
-
-            //ball.Dispose();
+            
             Ball.InitBalls();
 
             Board.InitBoard();
