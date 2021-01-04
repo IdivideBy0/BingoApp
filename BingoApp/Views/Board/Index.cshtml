@@ -24,7 +24,7 @@
 
 
         <tr>
-            <td>B</td>
+            <td style="background-color: red">B</td>
             @foreach (var item in Model.Brow)
             {
                 <td>
@@ -39,7 +39,7 @@
         </tr>
 
         <tr>
-            <td>I</td>
+            <td style="background-color: orange">I</td>
             @foreach (var item in Model.Irow)
             {
                 <td>
@@ -54,7 +54,7 @@
         </tr>
 
         <tr>
-            <td>N</td>
+            <td style="background-color: yellow">N</td>
             @foreach (var item in Model.Nrow)
             {
                 <td>
@@ -69,7 +69,7 @@
         </tr>
 
         <tr>
-            <td>G</td>
+            <td style="background-color:yellowgreen">G</td>
             @foreach (var item in Model.Grow)
             {
                 <td>
@@ -84,7 +84,7 @@
         </tr>
 
         <tr>
-            <td>O</td>
+            <td style="background-color: lightseagreen">O</td>
             @foreach (var item in Model.Orow)
             {
                 <td>
@@ -100,7 +100,7 @@
 
 
     </table>
-    <p>Balls remaining -> @Model.totalBalls</p>
+    <h1>Balls remaining -> @Model.totalBalls</h1>
     <div>
         @Html.ActionLink("New Board", "Delete")
     </div>
