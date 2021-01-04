@@ -16,5 +16,14 @@ namespace BingoApp.Helpers
         public int totalBalls { get; set; }
 
         public KeyValuePair<int, char> lastCalledBall { get; set; }
+
+        // Card stuff
+
+        public int[] intRowB;
+        public int[] intRowI;
+        public int[] intRowN;
+        public int[] intRowG;
+        public int[] intRowO;
+
     }
 }

@@ -97,10 +97,53 @@
         </tr>
 
     </table>
-    
-    <h1>Balls remaining -> @Model.totalBalls</h1>
-    <div>
-        @Html.ActionLink("New Board", "Delete")
-    </div>
+    <!-- Card table -->
+    <table class="table table-bordered">
+        <tr>
+            <th>B</th>
+            <th>I</th>
+            <th>N</th>
+            <th>G</th>
+            <th>O</th>
+        </tr>
+        <tr>
+            <td>@Model.intRowB[0]</td>
+            <td>@Model.intRowI[0]</td>
+            <td>@Model.intRowN[0]</td>
+            <td>@Model.intRowG[0]</td>
+            <td>@Model.intRowO[0]</td>
+        </tr>
+        <tr>
+            <td>@Model.intRowB[1]</td>
+            <td>@Model.intRowI[1]</td>
+            <td>@Model.intRowN[1]</td>
+            <td>@Model.intRowG[1]</td>
+            <td>@Model.intRowO[1]</td>
+        </tr>
+        <tr>
+            <td>@Model.intRowB[2]</td>
+            <td>@Model.intRowI[2]</td>
+            <td>FREE</td>
+            <td>@Model.intRowB[2]</td>
+            <td>@Model.intRowI[2]</td>
+        </tr>
+        <tr>
+            <td>@Model.intRowB[3]</td>
+            <td>@Model.intRowI[3]</td>
+            <td>@Model.intRowN[3]</td>
+            <td>@Model.intRowG[3]</td>
+            <td>@Model.intRowO[3]</td>
+        </tr>
+        <tr>
+            <td>@Model.intRowB[4]</td>
+            <td>@Model.intRowI[4]</td>
+            <td>@Model.intRowN[4]</td>
+            <td>@Model.intRowG[4]</td>
+            <td>@Model.intRowO[4]</td>
+        </tr>
+        <h1>Balls remaining -> @Model.totalBalls</h1>
+        <div>
+            @Html.ActionLink("New Board", "Delete")
+        </div>
 </body>
 </html>

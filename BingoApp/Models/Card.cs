@@ -5,22 +5,22 @@ using System.Web;
 
 namespace BingoApp.Models
 {
-    class Card
+    static class Card
     {
 
-        private List<int> rowB = new List<int>();
-        private List<int> rowI = new List<int>();
-        private List<int> rowN = new List<int>();
-        private List<int> rowG = new List<int>();
-        private List<int> rowO = new List<int>();
+        private static List<int> rowB = new List<int>();
+        private static List<int> rowI = new List<int>();
+        private static List<int> rowN = new List<int>();
+        private static List<int> rowG = new List<int>();
+        private static List<int> rowO = new List<int>();
 
-        public int[] intRowB;
-        public int[] intRowI;
-        public int[] intRowN;
-        public int[] intRowG;
-        public int[] intRowO;
+        public static int[] intRowB;
+        public static int[] intRowI;
+        public static int[] intRowN;
+        public static int[] intRowG;
+        public static int[] intRowO;
 
-        public void GenerateCard()
+        public static void GenerateCard()
         {
 
             //while (amt > 0)
@@ -63,7 +63,7 @@ namespace BingoApp.Models
                 }
                 Console.WriteLine(Environment.NewLine);
 
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     int tmp = rnd.Next(31, 45);
                     //if (i == 2)

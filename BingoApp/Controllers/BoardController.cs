@@ -20,6 +20,15 @@ namespace BingoApp.Controllers
             BdHelper helper = new BdHelper { Brow = Board.Brow, Irow = Board.Irow, Nrow = Board.Nrow, Grow = Board.Grow, Orow = Board.Orow };
             helper.totalBalls = Ball.totalBalls;
 
+            //Card card = new Card();
+            Card.GenerateCard();
+
+            helper.intRowB = Card.intRowB;
+            helper.intRowI = Card.intRowI;
+            helper.intRowN = Card.intRowN;
+            helper.intRowG = Card.intRowG;
+            helper.intRowO = Card.intRowO;
+
             return View(helper);
         }
 
@@ -116,7 +125,13 @@ namespace BingoApp.Controllers
 
             BdHelper helper = new BdHelper { Brow = Board.Brow, Irow = Board.Irow, Nrow = Board.Nrow, Grow = Board.Grow, Orow = Board.Orow };
             helper.totalBalls = Ball.totalBalls;
-            helper.lastCalledBall =  new KeyValuePair<int, char>(Ball.number, Ball.letter); 
+            helper.lastCalledBall =  new KeyValuePair<int, char>(Ball.number, Ball.letter);
+
+            helper.intRowB = Card.intRowB;
+            helper.intRowI = Card.intRowI;
+            helper.intRowN = Card.intRowN;
+            helper.intRowG = Card.intRowG;
+            helper.intRowO = Card.intRowO;
 
 
             return View(helper);
@@ -173,6 +188,12 @@ namespace BingoApp.Controllers
             BdHelper helper = new BdHelper { Brow = Board.Brow, Irow = Board.Irow, Nrow = Board.Nrow, Grow = Board.Grow, Orow = Board.Orow };
             helper.totalBalls = Ball.totalBalls;
             //helper.lastCalledBall = new KeyValuePair<int, char>(Ball.number, Ball.letter);
+            Card.GenerateCard();
+            helper.intRowB = Card.intRowB;
+            helper.intRowI = Card.intRowI;
+            helper.intRowN = Card.intRowN;
+            helper.intRowG = Card.intRowG;
+            helper.intRowO = Card.intRowO;
 
             return View(helper);
 
