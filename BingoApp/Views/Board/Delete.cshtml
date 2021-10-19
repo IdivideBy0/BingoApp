@@ -14,9 +14,9 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <p>
-        @Html.ActionLink("Draw Ball", "Create")
-    </p>
+    <div class="text-center">
+        @Html.ActionLink("Draw Ball", "Create", null, new { @class = "btn btn-primary" })
+    </div>
     <table class="table table-dark table-bordered">
         <tr>
         </tr>
@@ -124,8 +124,8 @@
             <td>@Model.intRowB[2]</td>
             <td>@Model.intRowI[2]</td>
             <td>FREE</td>
-            <td>@Model.intRowB[2]</td>
-            <td>@Model.intRowI[2]</td>
+            <td>@Model.intRowG[2]</td>
+            <td>@Model.intRowO[2]</td>
         </tr>
         <tr>
             <td>@Model.intRowB[3]</td>
@@ -141,10 +141,21 @@
             <td>@Model.intRowG[4]</td>
             <td>@Model.intRowO[4]</td>
         </tr>
-        </table>
-        <h1>Balls remaining -> @Model.totalBalls</h1>
-        <div>
-            @Html.ActionLink("New Board", "Delete")
+    </table>
+    <div class="text-center">
+        <div style="width: 50%; float: left;">
+            <h1>Balls remaining -> @Model.totalBalls</h1>
         </div>
+        <div style="width: 50%; float: left;">
+            <h1>&nbsp;</h1>
+        </div>
+
+    </div>
+    <div class="text-center">
+        @Html.ActionLink("New Board", "Delete", null, new { @class = "btn btn-primary" })
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
 </body>
 </html>

@@ -14,16 +14,18 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <p>
+    <div class="text-center">
 
         @{
             if (@Model.totalBalls != 0)
             {
-                @Html.ActionLink("Draw Ball", "Create")
+
+                @Html.ActionLink("Draw Ball", "Create", null, new { @class = "btn btn-primary" })
+
             }
         }
-    </p>
-    <table class="table table-dark table-bordered">
+    </div>
+    <table id="bingoBoard" class="table table-dark table-bordered">
         <tr>
         </tr>
 
@@ -104,7 +106,7 @@
 
     </table>
     <!-- Card table -->
-    <table class="table table-bordered">
+    <table id="playersCard" class="table table-bordered">
         <tr>
             <th>B</th>
             <th>I</th>
@@ -130,8 +132,8 @@
             <td>@Model.intRowB[2]</td>
             <td>@Model.intRowI[2]</td>
             <td>FREE</td>
-            <td>@Model.intRowB[2]</td>
-            <td>@Model.intRowI[2]</td>
+            <td>@Model.intRowG[2]</td>
+            <td>@Model.intRowO[2]</td>
         </tr>
         <tr>
             <td>@Model.intRowB[3]</td>
@@ -149,10 +151,94 @@
         </tr>
 
     </table>
-    <h1>Ball Called -> @Model.lastCalledBall</h1>
-    <h1>Balls remaining -> @Model.totalBalls</h1>
-    <div>
-        @Html.ActionLink("New Board", "Delete")
+    @{
+        var ballnum = @Model.lastCalledBall.Key;
+        var ballletter = @Model.lastCalledBall.Value;
+    }
+    <div class="text-center">
+        <div style="width: 50%; float: left;">
+            <h1>Balls remaining -> @Model.totalBalls</h1>
+        </div>
+        <div style="width: 50%; float: left;">
+            <h1>Ball Called -> @ballletter @ballnum </h1>
+        </div>
     </div>
+
+
+    <div class="text-center">
+        @Html.ActionLink("New Board", "Delete", null, new { @class = "btn btn-primary" })
+    </div>
+    <p id="boardInfo"></p>
+    <p id="playerInfo"></p>
+    <p id="genInfo"></p>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script>
+
+        // scan the ball called table and look for a match on the scorecard. If there is a match, change color of the placeholder on the scorecard.
+
+
+        var called = [];
+        var playersvalues = [];
+
+        function GetCellValues() {
+            var board = document.getElementById('bingoBoard');
+            for (var br = 0, n = board.rows.length; br < n; br++) {
+                for (var bc = 1, m = board.rows[br].cells.length; bc < m; bc++) {
+                    // alert(table.rows[r].cells[c].innerHTML);
+                    // filter out B, I, N, G, O
+                    var boardCellContent = board.rows[br].cells[bc].innerHTML.trim();
+                    // if (boardCellContent != 'B' || boardCellContent != 'I' || boardCellContent != 'N' || boardCellContent != 'G' || boardCellContent != 'O') {
+                    //alert(cellContent); /* cool, bingo is filtered let's scan the players card */
+                    if (boardCellContent != 0) {
+                        called.push(boardCellContent);
+
+
+                        playersvalues.length = 0; // reset array
+                        var card = document.getElementById('playersCard');
+                        for (var pcr = 1, y = card.rows.length; pcr < y; pcr++) {
+                            for (var pcc = 0, x = card.rows[pcr].cells.length; pcc < x; pcc++) {
+                                var playerCellContent = card.rows[pcr].cells[pcc].innerHTML;
+                                playersvalues.push(playerCellContent);
+
+                                if (playerCellContent == 'FREE') {
+                                    card.rows[pcr].cells[pcc].style.backgroundColor = "red";
+                                }
+                                if (playerCellContent == boardCellContent) {
+                                    //alert('match found' + playerCellContent); // THIS CODE WORKS!! FINALLY DETECTED A MATCH!!!!!
+                                    // TODO change color of this cell x[0].style.backgroundColor = "yellow";
+                                    card.rows[pcr].cells[pcc].style.backgroundColor = "red";
+                                }
+
+
+                            }
+                        }
+
+
+                    }
+
+                    // }
+                }
+            }
+
+            // for debugging only
+            //boardInfo.innerHTML = called;
+            //playerInfo.innerHTML = playersvalues;
+        }
+
+
+
+
+
+        window.onload = (event) => {
+
+            GetCellValues();
+        };
+
+
+
+    </script>
+
 </body>
 </html>
