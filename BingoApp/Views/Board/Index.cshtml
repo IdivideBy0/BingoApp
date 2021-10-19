@@ -17,149 +17,157 @@
     <div class="text-center">
         @Html.ActionLink("Draw Ball", "Create", null, new { @class = "btn btn-primary" })
     </div>
-    <table class="table table-dark table-bordered">
-        <tr>
-        </tr>
+    <div>
+        <table class="table table-dark table-bordered">
+            <tr>
+            </tr>
 
 
-        <tr>
-            <td style="background-color: red">B</td>
-            @foreach (var item in Model.Brow)
-            {
-                <td>
+            <tr>
+                <td style="background-color: red">B</td>
+                @foreach (var item in Model.Brow)
+                {
+                    <td>
 
-                    @{
-                        string tmp = item.ToString();
+                        @{
+                            string tmp = item.ToString();
 
-                    }@tmp
+                        }@tmp
 
-                </td>
-            }
-        </tr>
+                    </td>
+                }
+            </tr>
 
-        <tr>
-            <td style="background-color: orange">I</td>
-            @foreach (var item in Model.Irow)
-            {
-                <td>
+            <tr>
+                <td style="background-color: orange">I</td>
+                @foreach (var item in Model.Irow)
+                {
+                    <td>
 
-                    @{
-                        string tmp = item.ToString();
+                        @{
+                            string tmp = item.ToString();
 
-                    }@tmp
+                        }@tmp
 
-                </td>
-            }
-        </tr>
+                    </td>
+                }
+            </tr>
 
-        <tr>
-            <td style="background-color: yellow">N</td>
-            @foreach (var item in Model.Nrow)
-            {
-                <td>
+            <tr>
+                <td style="background-color: yellow">N</td>
+                @foreach (var item in Model.Nrow)
+                {
+                    <td>
 
-                    @{
-                        string tmp = item.ToString();
+                        @{
+                            string tmp = item.ToString();
 
-                    }@tmp
+                        }@tmp
 
-                </td>
-            }
-        </tr>
+                    </td>
+                }
+            </tr>
 
-        <tr>
-            <td style="background-color:yellowgreen">G</td>
-            @foreach (var item in Model.Grow)
-            {
-                <td>
+            <tr>
+                <td style="background-color:yellowgreen">G</td>
+                @foreach (var item in Model.Grow)
+                {
+                    <td>
 
-                    @{
-                        string tmp = item.ToString();
+                        @{
+                            string tmp = item.ToString();
 
-                    }@tmp
+                        }@tmp
 
-                </td>
-            }
-        </tr>
+                    </td>
+                }
+            </tr>
 
-        <tr>
-            <td style="background-color: lightseagreen">O</td>
-            @foreach (var item in Model.Orow)
-            {
-                <td>
+            <tr>
+                <td style="background-color: lightseagreen">O</td>
+                @foreach (var item in Model.Orow)
+                {
+                    <td>
 
-                    @{
-                        string tmp = item.ToString();
+                        @{
+                            string tmp = item.ToString();
 
-                    }@tmp
+                        }@tmp
 
-                </td>
-            }
-        </tr>
+                    </td>
+                }
+            </tr>
 
 
-    </table>
+        </table>
+    </div>
     <!-- Card table -->
-    <table class="table table-bordered">
-        <tr>
-            <th>B</th>
-            <th>I</th>
-            <th>N</th>
-            <th>G</th>
-            <th>O</th>
-        </tr>
-        <tr>
-            <td>@Model.intRowB[0]</td>
-            <td>@Model.intRowI[0]</td>
-            <td>@Model.intRowN[0]</td>
-            <td>@Model.intRowG[0]</td>
-            <td>@Model.intRowO[0]</td>
-        </tr>
-        <tr>
-            <td>@Model.intRowB[1]</td>
-            <td>@Model.intRowI[1]</td>
-            <td>@Model.intRowN[1]</td>
-            <td>@Model.intRowG[1]</td>
-            <td>@Model.intRowO[1]</td>
-        </tr>
-        <tr>
-            <td>@Model.intRowB[2]</td>
-            <td>@Model.intRowI[2]</td>
-            <td>FREE</td>
-            <td>@Model.intRowG[2]</td>
-            <td>@Model.intRowO[2]</td>
-        </tr>
-        <tr>
-            <td>@Model.intRowB[3]</td>
-            <td>@Model.intRowI[3]</td>
-            <td>@Model.intRowN[3]</td>
-            <td>@Model.intRowG[3]</td>
-            <td>@Model.intRowO[3]</td>
-        </tr>
-        <tr>
-            <td>@Model.intRowB[4]</td>
-            <td>@Model.intRowI[4]</td>
-            <td>@Model.intRowN[4]</td>
-            <td>@Model.intRowG[4]</td>
-            <td>@Model.intRowO[4]</td>
-        </tr>
+    <div class="container">
+        <div class="column">&nbsp;</div>
+        <div class="column">
+            <table class="table table-bordered">
+                <tr>
+                    <th>B</th>
+                    <th>I</th>
+                    <th>N</th>
+                    <th>G</th>
+                    <th>O</th>
+                </tr>
+                <tr>
+                    <td>@Model.intRowB[0]</td>
+                    <td>@Model.intRowI[0]</td>
+                    <td>@Model.intRowN[0]</td>
+                    <td>@Model.intRowG[0]</td>
+                    <td>@Model.intRowO[0]</td>
+                </tr>
+                <tr>
+                    <td>@Model.intRowB[1]</td>
+                    <td>@Model.intRowI[1]</td>
+                    <td>@Model.intRowN[1]</td>
+                    <td>@Model.intRowG[1]</td>
+                    <td>@Model.intRowO[1]</td>
+                </tr>
+                <tr>
+                    <td>@Model.intRowB[2]</td>
+                    <td>@Model.intRowI[2]</td>
+                    <td>FREE</td>
+                    <td>@Model.intRowG[2]</td>
+                    <td>@Model.intRowO[2]</td>
+                </tr>
+                <tr>
+                    <td>@Model.intRowB[3]</td>
+                    <td>@Model.intRowI[3]</td>
+                    <td>@Model.intRowN[3]</td>
+                    <td>@Model.intRowG[3]</td>
+                    <td>@Model.intRowO[3]</td>
+                </tr>
+                <tr>
+                    <td>@Model.intRowB[4]</td>
+                    <td>@Model.intRowI[4]</td>
+                    <td>@Model.intRowN[4]</td>
+                    <td>@Model.intRowG[4]</td>
+                    <td>@Model.intRowO[4]</td>
+                </tr>
 
-    </table>
-    <div class="text-center">
-        <div style="width: 50%; float: left;">
-            <h1>Balls remaining -> @Model.totalBalls</h1>
+            </table>
+            </div>
+            <div class="column">&nbsp;</div>
         </div>
-        <div style="width: 50%; float: left;">
-            <h1>&nbsp;</h1>
-        </div>
+            <div class="text-center">
+                <div style="width: 50%; float: left;">
+                    <h1>Balls remaining -> @Model.totalBalls</h1>
+                </div>
+                <div style="width: 50%; float: left;">
+                    <h1>&nbsp;</h1>
+                </div>
 
-    </div>
-    
-    <div class="text-center">
-        @Html.ActionLink("New Board", "Delete", null, new { @class = "btn btn-primary" })
-    </div>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-   
+            </div>
+
+            <div class="text-center">
+                @Html.ActionLink("New Board", "Delete", null, new { @class = "btn btn-primary" })
+            </div>
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+
 </body>
 </html>
