@@ -8,8 +8,10 @@ using BingoApp.Helpers;
 
 namespace BingoApp.Controllers
 {
+    [Authorize]
     public class BoardController : Controller
     {
+        
         // GET: Board
         public ActionResult Index()
         {

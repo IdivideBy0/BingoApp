@@ -107,9 +107,14 @@
 
         </table>
     </div>
+    @{
+        var ballnum = @Model.lastCalledBall.Key;
+        var ballletter = @Model.lastCalledBall.Value;
+    }
     <!-- Card table -->
     <div class="container">
-        <div class="column">&nbsp;</div>
+        <div class="column"><h1 class="padit">Balls remaining</h1>
+                            <h1 class="padit">@Model.totalBalls</h1></div>
         <div class="column">
             <table id="playersCard" class="table table-bordered">
                 <tr>
@@ -157,20 +162,11 @@
 
             </table>
         </div>
-        <div class="column">&nbsp;</div>
+        <div class="column"><h1 class="padit">Ball Called</h1>
+                            <h1 class="padit">@ballletter @ballnum </h1></div>
     </div>
-    @{
-        var ballnum = @Model.lastCalledBall.Key;
-        var ballletter = @Model.lastCalledBall.Value;
-    }
-    <div class="text-center">
-        <div style="width: 50%; float: left;">
-            <h1>Balls remaining -> @Model.totalBalls</h1>
-        </div>
-        <div style="width: 50%; float: left;">
-            <h1>Ball Called -> @ballletter @ballnum </h1>
-        </div>
-    </div>
+
+
 
 
     <div class="text-center">

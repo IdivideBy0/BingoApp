@@ -33,3 +33,33 @@ textarea {
 .container {
     width: 100%;
 }
+
+.padit {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto; 
+}
+
+@media (min-width: 400px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 800px) {
+    h1 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+}
