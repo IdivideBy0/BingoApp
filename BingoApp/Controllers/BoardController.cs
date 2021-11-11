@@ -15,14 +15,10 @@ namespace BingoApp.Controllers
         // GET: Board
         public ActionResult Index()
         {
-            //Board board = new Board();
-
-            //Board.InitBoard();
-
+            
             BdHelper helper = new BdHelper { Brow = Board.Brow, Irow = Board.Irow, Nrow = Board.Nrow, Grow = Board.Grow, Orow = Board.Orow };
             helper.totalBalls = Ball.totalBalls;
-
-            //Card card = new Card();
+            
             Card.GenerateCard();
 
             helper.intRowB = Card.intRowB;
@@ -43,9 +39,7 @@ namespace BingoApp.Controllers
         // GET: Board/Create
         public ActionResult Create()
         {
-            //Ball ball = new Ball();
-
-            //ball.CreateBall();
+            
             Ball.CreateBall();
 
             //BdHelper
@@ -187,7 +181,7 @@ namespace BingoApp.Controllers
 
             BdHelper helper = new BdHelper { Brow = Board.Brow, Irow = Board.Irow, Nrow = Board.Nrow, Grow = Board.Grow, Orow = Board.Orow };
             helper.totalBalls = Ball.totalBalls;
-            //helper.lastCalledBall = new KeyValuePair<int, char>(Ball.number, Ball.letter);
+            
             Card.GenerateCard();
             helper.intRowB = Card.intRowB;
             helper.intRowI = Card.intRowI;
